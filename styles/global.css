@@ -1,0 +1,24 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
+	font-family: var(--font-family);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--off-white);
+	font-size: var(--body-size);
+}
+
+[class*='container'] {
+	margin: 5rem auto;
+	width: min(90%, 120rem);
+}
